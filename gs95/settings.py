@@ -25,7 +25,7 @@ SECRET_KEY = 'cq7p=6dojc#sz%4zp0xk#)wkm=@4@y6(b1^r2j(d3vfc-etxi4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 
@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'app',
+    'social_django',
+    'django_extensions'
+
 ]
 
 MIDDLEWARE = [
@@ -125,3 +128,5 @@ AUTHENTICATION_BACKENDS = [
 'django.contrib.auth.backends.ModelBackend',
 'app.authentication.EmailAuthBackend',
 ]
+
+
